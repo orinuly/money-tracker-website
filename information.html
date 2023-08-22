@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Tracker</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="mainpage.php"><img src="images/logo.png" alt=""></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="mainpage.php">HOME</a></li>
+            <li><a href="information.php">INFORMATION</a></li>
+            <li><a href="aboutus.php">ABOUT US</a></li>
+            <li><a href="contactus.php">CONTACT US</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()" id="navLinks"></i>
+      </nav>
+      <div class="text-box">
+        <h1>Track Your Finances</h1>
+        <p>Keeping track of your finances and allocating them is one of the stages in the entry into adulthood.<br>Instead of using typical paper and pen, the best solution is to create a user-friendly, functional application</p>
+        <a href="#" class="hero-tbn">Start Right Now!</a>
+      </div>
+    </section>
+    <section class="information">
+      <h1>More Information About Tracker</h1>
+      <p>Here's more information about Money Tracker</p>
+      <div class="row">
+        <div class="inf-col">
+          <img src="images/diagram.png" alt="" width="200px">
+          <p>The program provides an intuitive and understandable interface for everyone, which always contains everything you need at a touch away</p>
+        </div>
+        <div class="inf-col">
+          <img src="images/dollar.png" alt="" width="200px">
+          <p>Just specify possible accounts, expense groups, enter your profits/expenses and enjoy control of your money with detailed reports and flexible budgets</p>
+        </div>
+        <div class="inf-col">
+          <img src="images/time.png" alt="" width="200px">
+          <p>A unique feature is the calculation according to the adjust annuity payment formula, which is used by most banks. It will not take a lot of time from you</p>
+        </div>
+      </div>
+    </section>
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      function showMenu(){
+        navLinks.style.right="0";
+      }
+      function hideMenu(){
+        navLinks.style.right="-200px";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Tracker</title>
+    <link rel="stylesheet" href="style4.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="mainpage.php"><img src="images/logo.png" alt=""></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="mainpage.php">HOME</a></li>
+            <li><a href="information.php">INFORMATION</a></li>
+            <li><a href="aboutus.php">ABOUT US</a></li>
+            <li><a href="contactus.php">CONTACT US</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()" id="navLinks"></i>
+      </nav>
+      <div class="text-box">
+        <div class="contact-section">
+          <h1>Contact Us</h1>
+          <div class="border">
+          </div>
+          <div class="contact-form" method="post">
+            <input type="text" class="contact-form-text" placeholder="Your Name" name="name" id="name">
+            <input type="email" class="contact-form-text" placeholder="Your Email" name="email" id="email">
+            <textarea class="contact-form-text" placeholder="Your Message" name="message" id="message"></textarea>
+            <input type="button" class="contact-form-btn" value="Send Message" onclick="sendEmail()">
+          </div>
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script type="text/javascript">
+        function sendEmail() {
+          var name = $("#name");
+          var email = $("#email");
+          var message = $("#message");
+
+          if (isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(message)) {
+            $.ajax({
+              url: 'cfhandler.php',
+              method: 'POST',
+              dataType: 'json',
+              data: {
+                name: name.val(),
+                email: email.val(),
+                message: message.val()
+              }, success: function(response) {
+                console.log(response);
+              }
+            });
+          }
+        }
+
+        function isNotEmpty(caller) {
+          if (caller.val() == "") {
+            caller.css('border', '1px solid red');
+            return false;
+          } else {
+            caller.css('border', '');
+          }
+          return true;
+        }
+      </script>
+
+      <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+        navLinks.style.right="0";
+        }
+        function hideMenu(){
+        navLinks.style.right="-200px";
+        }
+      </script>
+  </body>
+</html>

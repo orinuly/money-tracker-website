@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Tracker</title>
+    <link rel="stylesheet" href="style6.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="mainpage.php"><img src="images/logo.png" alt=""></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="mainpage.php">HOME</a></li>
+            <li><a href="information.php">INFORMATION</a></li>
+            <li><a href="aboutus.php">ABOUT US</a></li>
+            <li><a href="contactus.php">CONTACT US</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()" id="navLinks"></i>
+      </nav>
+      <div class="text-box">
+        <h1>Want to Read More?</h1>
+        <p>We provided more articles, go back, if you want to!</p>
+        <a href="#" class="hero-tbn">Go Back</a>
+      </div>
+    </section>
+    <section class="information">
+      <h1>7 Tips For Spending Money Wisely by Phil Town</h1>
+      <br>
+      <p>For some people, financial struggles are due to not bringing in enough money. For many others, though, the problem comes from not spending money wisely or from spending more money than they make.</p>
+      <p>According to Time, nearly 73% of Americans die in debt.</p>
+      <p>In this article, we’ll take a look at 7 ways that you can start better spending the money you earn in order to help you reach your financial goals.</p>
+      <br> <h1>1. Track Your Finances</h1>
+      <p>Before you can start figuring out how to spend money more wisely, you first need to understand where your money is going. Make a budget and track both your income and your expenses. Once you know where your money is going, you can start looking for opportunities where it could be better spent.</p>
+      <br> <h1>2. Think About the Long-Term Benefits and Drawbacks of Purchases</h1>
+      <p>Far too many purchases are impulse decisions. While this is fine when it’s a $1 chocolate bar at the supermarket, it becomes a problem for larger purchases. Before you buy something, think about how it will affect you in the future.</p>
+      <p>How long is it going to last? Is it going to put you in debt? Is the value you will get out of it over its lifetime worth the cost?</p>
+      <p>These are questions you can use to determine if something is really worth buying.</p>
+      <br> <h1>3. Only Put Money on Your Credit Card if You Can Afford to Pay it off Each Month</h1>
+      <p>Credit cards aren’t inherently a hindrance on your finances. After all, they are convenient and many cards offer cash back on your purchases.</p>
+      <p>However, you should only spend money on your credit card if you are able to fully pay it off at the end of the month.</p>
+      <p>If you pay off your credit card balance each month, you won’t incur any interest charges and it will essentially be the same as paying cash.</p>
+      <p>If you don’t pay off your balance each month, though, the interest accrued can quickly spiral out of control.</p>
+      <br> <h1>4. Stop Trying to Impress Other People</h1>
+      <p>The average person spends far too much money merely trying to maintain an image. From fancy cars to brand-name clothing, much of what we buy has more to do with impressing others than it does to do with purchasing something that we actually want and enjoy.</p>
+      <p>However, “Keeping Up With the Joneses” is an expensive and unnecessary pursuit. Buy the things that you yourself enjoy and don’t fall prey to the feeling that you have to spend money in order to impress other people.</p>
+      <br> <h1>5. Figure out What Habits Drain Your Budget</h1>
+      <p>After you start tracking your finances, you can begin looking for habits that may be draining your budget. These habits could include expensive hobbies, eating out too much, spending too much money on clothing, or any number of other financial drains.</p>
+      <p>Once you figure out which habits are eating up large portions of your income, you can then evaluate whether or not these habits are really necessary.</p>
+      <br> <h1>6. Learn to Value Savings Over Products</h1>
+      <p>Some people are naturally good at saving money and draw enjoyment from growing their wealth. For others, money is something that is spent the moment it reaches their hands, and anything else feels like a wasted opportunity.</p>
+      <p>If you find yourself in the second camp, try to adopt a mentality that values savings over products. In the end, money invested or money saved will almost always benefit your life more than money spent on products that will wear out or become uninteresting in little time at all.</p>
+      <br> <h1>7. Start Investing Early</h1>
+      <p>Spending your money wisely isn’t just about avoiding unnecessary purchases – it also requires you to take the money that you save and put it towards things that will help you reach your financial goals. With that in mind, there’s no such thing as starting investing too early or investing too little.</p>
+      <p>No matter how young (or old) that you are or how little money you have to invest, putting your money into quality companies that will grow in value as time goes on is always a wise use of your income.</p>
+      <br>
+    </section>
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      function showMenu(){
+        navLinks.style.right="0";
+      }
+      function hideMenu(){
+        navLinks.style.right="-200px";
+      }
+    </script>
+  </body>
+</html>

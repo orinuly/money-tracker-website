@@ -1,0 +1,75 @@
+<?php
+session_start();
+
+	include("connection.php");
+	include("functions.php");
+
+
+	if($_SERVER['REQUEST_METHOD'] == "POST")
+	{
+		$user_name = $_POST['user_name'];
+		$password = $_POST['password'];
+
+		if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
+		{
+			$user_id = random_num(20);
+			$query = "insert into users (user_id,user_name,password) values ('$user_id','$user_name','$password')";
+
+			mysqli_query($con, $query);
+
+			header("Location: login.php");
+			die;
+		}else
+		{
+			echo "Please, Enter Some Valid Information!";
+		}
+	}
+ ?>
+
+ <!DOCTYPE html>
+ <html lang="en" dir="ltr">
+   <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Money Tracker</title>
+     <link rel="stylesheet" href="style3.css">
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   </head>
+   <body>
+ 	<div class="wave">
+		<br>
+		<a href="mainpage.php" class = "hero-tbn"><h1> MAINPAGE </h1></a>
+ 	<div class="container">
+ 		<div class="img">
+ 			<img src="images/draw2.svg">
+ 		</div>
+ 		<div class="login-content">
+ 			<form method="post">
+ 				<img src="images/avatar.svg">
+ 				<h2 class="title">Registration</h2>
+            		<div class="input-div one">
+            		   <div class="i">
+            		   		<i class="fas fa-user"></i>
+            		   </div>
+            		   <div class="div">
+            		   		<h5>Create Your Username</h5>
+            		   		<input type="text" class="input" name="user_name">
+            		   </div>
+            		</div>
+            		<div class="input-div pass">
+            		   <div class="i">
+            		    	<i class="fas fa-lock"></i>
+            		   </div>
+            		   <div class="div">
+            		    	<h5>Create Your Password</h5>
+            		    	<input type="password" class="input" name="password">
+             	   </div>
+             	</div>
+             	<a href="login.php">Already have an account?</a>
+             	<input type="submit" class="btn" value="Create Account" name="">
+             </form>
+         </div>
+     </div>
+     </div>
+ </body>
+ </html>

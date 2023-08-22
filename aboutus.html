@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Tracker</title>
+    <link rel="stylesheet" href="style7.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="mainpage.php"><img src="images/logo.png" alt=""></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="mainpage.php">HOME</a></li>
+            <li><a href="information.php">INFORMATION</a></li>
+            <li><a href="aboutus.php">ABOUT US</a></li>
+            <li><a href="contactus.php">CONTACT US</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()" id="navLinks"></i>
+      </nav>
+      <div class="text-box">
+        <h1>Meet Our Team!</h1>
+        <p>There's some information about our team and the purpose of our little project</p>
+      </div>
+    </section>
+    <section class="information">
+      <h1>Team Members</h1> <br>
+      <div class="row">
+        <div class="inf-col">
+          <img src="images/avatar_female.png" alt="" width="200px">
+          <h2>Assel Shora</h2>
+          <p>Astana IT University, 1st year</p>
+        </div>
+        <div class="inf-col">
+          <img src="images/avatar_male.png" alt="" width="200px">
+          <h2>Nurlan Amanov</h2>
+          <p>Astana IT University, 1st year</p>
+        </div>
+        <div class="inf-col">
+          <img src="images/avatar_female.png" alt="" width="200px">
+          <h2>Ayana Khairulla</h2>
+          <p>Astana IT University, 1st year</p>
+        </div>
+      </div>
+      <br>
+      <h1>Purpose of the Project</h1> <br>
+      <p id="text">Project was created This website was created as a Coding Lab project and took 10 weeks to complete. The project was created by inexperienced IT students to gain experience in creating web sites. All website designs were taken from the internet and do not belong to us.</p>
+      <br> <br>
+    </section>
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      function showMenu(){
+        navLinks.style.right="0";
+      }
+      function hideMenu(){
+        navLinks.style.right="-200px";
+      }
+    </script>
+  </body>
+</html>
